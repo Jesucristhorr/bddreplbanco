@@ -1,0 +1,15 @@
+{
+  "name": "bancorepbdd",
+  "version": "0.1.0",
+  "description": "Aplicación web desarrollada en Node.js de simulación de un cajero bancario para probar la replicación con base de datos MongoDB.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js"
+  },
+  "author": "Jesús Moreira (jesusromc8@gmail.com)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
