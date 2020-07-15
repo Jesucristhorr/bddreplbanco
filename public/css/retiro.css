@@ -1,0 +1,122 @@
+
+
+
+
+
+h1{
+    font-family: sans-serif;
+}
+
+p{
+    font-family: hero;
+    
+}
+
+
+/*#div {
+    border: 3px solid black;
+    margin-left: 150px;
+    margin-right: 100px;
+}*/
+
+
+.cabeza {
+    /*display: flex;
+    background: #ffffff;
+    border: 1px solid #ffffff ;
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 1px;
+    justify-content: left;
+    flex-direction: column;*/
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: flex-start;
+    flex-direction: column;
+    
+    
+}
+
+.logotipo {
+    width: 200px;
+    margin-bottom: 0.5rem;
+       
+}
+
+.retirarDinero{
+    border: 1px solid #ffffff;
+    padding: 20px;
+}
+
+.cuentatitle{
+    background: #ffffff;
+    margin-left: 150px;
+    border: 1px solid #ffffff;
+}
+
+.cuenta {
+    border: 1px, solid black;
+    display: flex;
+    justify-content: center;
+    background: #e5eaeb;
+    margin-left: 150px;
+    margin-right: 100px;
+    
+
+}
+
+.cajitaCuenta{
+    padding: 20px;
+    
+}
+
+.cajitaCuentaBoton {
+    justify-content: center;
+    margin-top: 90px;
+    /*align-self: center;*/
+}
+
+#btnCambiar{
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #48FF98;
+    border-radius: 8px;
+    font-family: hero;
+
+}
+
+.montoRetirar{
+    display: flex;
+    justify-content: center;
+    background: #ffffff;
+    border: 1px, solid black;
+    align-items: center;
+    flex-direction: column;
+    font-family: hero;
+    
+
+}
+
+#btncontinuar{
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #48DAFF;
+    border-radius: 8px;
+    font-family: hero;
+    
+}
