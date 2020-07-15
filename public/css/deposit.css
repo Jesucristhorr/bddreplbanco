@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+
+.header{
+  
+
+
+
+}
+.topDiv{
+    display: flex;
+    flex-direction: line;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+}
