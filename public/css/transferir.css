@@ -7,6 +7,10 @@ html {
   box-sizing: border-box;
 }
 
+* {
+  font-family: "Rubik", sans-serif;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -28,6 +32,7 @@ html {
   text-decoration: none;
   color: black;
   background-color: rgb(72, 235, 180);
+  font-family: "Karla", sans-serif;
   border-radius: 5px;
   width: 120px;
   height: 35px;
@@ -46,5 +51,4 @@ html {
 
 .titulo {
   font-size: 40px;
-  font-family: "Rubik", sans-serif;
 }

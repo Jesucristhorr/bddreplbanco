@@ -7,6 +7,10 @@ html {
   box-sizing: border-box;
 }
 
+* {
+  font-family: "Rubik", sans-serif;
+}
+
 *:focus {
   outline: none;
 }
@@ -24,7 +28,7 @@ html {
   color: #404040;
   border: none;
   border-radius: 5px;
-  font-family: hero;
+  font-family: "Karla", sans-serif;
   text-decoration: none;
   text-align: center;
   display: flex;
@@ -65,13 +69,14 @@ html {
 
 .topDiv {
   display: flex;
-  flex-direction: line;
   justify-content: space-between;
   align-items: center;
-  align-content: center;
-  width: 100%;
-  height: auto;
-  padding: 0.5rem;
+  height: 8vh;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  -webkit-box-shadow: 0px 8px 11px 0px rgba(245, 245, 245, 1);
+  -moz-box-shadow: 0px 8px 11px 0px rgba(245, 245, 245, 1);
+  box-shadow: 0px 8px 11px 0px rgba(245, 245, 245, 1);
 }
 
 .buttonDiv {
@@ -87,7 +92,7 @@ html {
 
 .text {
   font-size: 200%;
-  font-family: hero;
+  font-family: "Rubik", sans-serif;
   color: #404040;
   text-align: center;
 }
@@ -133,7 +138,7 @@ html {
   cursor: pointer;
   border: none;
   border-radius: 5px;
-  font-family: hero;
+  font-family: "Karla", sans-serif;
   text-align: center;
   display: flex;
   justify-content: center;

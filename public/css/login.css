@@ -7,6 +7,10 @@ html {
   box-sizing: border-box;
 }
 
+* {
+  font-family: "Rubik", sans-serif;
+}
+
 .logotipo {
   width: 200px;
   margin-bottom: 0.5rem;
@@ -37,7 +41,7 @@ html {
   border: none;
   border-radius: 5px;
   margin-top: 1rem;
-  font-family: hero;
+  font-family: "Karla", sans-serif;
   transition: box-shadow 0.2s linear;
 }
 
@@ -55,7 +59,6 @@ html {
   -moz-box-shadow: 0px 0px 0px 4px rgba(175, 228, 247, 1);
   box-shadow: 0px 0px 0px 4px rgba(175, 228, 247, 1);
 }
-
 
 .contenedor {
   display: flex;
