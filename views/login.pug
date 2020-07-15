@@ -1,0 +1,28 @@
+doctype html 
+html 
+    head
+        style
+            include ../public/css/login.css
+
+
+    body
+        div(class= 'contenedor')
+
+            div(class = 'contenedor2')
+
+                .logotipo(class = 'center')
+                    include ../public/assets/logoSVG.svg
+
+                input(type = 'text', id = 'usuario', class = 'center boxSize', placeholder= 'Usuario')
+                input(type = 'password', id = 'contrasenia', class = 'center boxSize', placeholder= 'Contraseña')
+                button(type = 'button', id = 'ingresar', class = 'center button button1') Ingresar
+        
+                div(class = 'cont')
+                    a(href = '/nuevaConstrasenia', style = 'text-decoration: none') ¿Olvidaste tu contraseña?
+
+                p(class = 'text') ___________________________________
+
+                p(class = 'text') ¿Aún no tienes una cuenta?
+
+                button(type = 'button', id = 'crearCuenta', class = 'center button button2') Crear una cuenta
+        

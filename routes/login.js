@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
 
-// Ruta raiz
+// Rutas de login
 router.get("/", (req, res, next) => {
-  res.redirect("/login");
+  res.render("login");
 });
 
 module.exports = router;

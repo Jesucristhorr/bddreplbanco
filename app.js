@@ -4,7 +4,9 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
+// Importando rutas
 const indexRouter = require("./routes/index");
+const loginRouter = require("./routes/login");
 
 // Si es ambiente de desarrollo, usar el archivo .env
 // para las variables de entorno
@@ -32,6 +34,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Rutas de la aplicación
 app.use("/", indexRouter);
+app.use("/login", loginRouter);
 
 // Inicio del servidor
 app.listen(process.env.PORT, () => {

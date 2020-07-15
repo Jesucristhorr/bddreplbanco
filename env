@@ -1,2 +1,0 @@
-PORT=3000
-DB_URI=mongodb+srv://admin:asd123@devreplbanco.vl3im.mongodb.net/bankapp?retryWrites=true&w=majority
