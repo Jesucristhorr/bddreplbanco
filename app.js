@@ -8,6 +8,7 @@ const monk = require("monk");
 // Importando rutas
 const indexRouter = require("./routes/index");
 const loginRouter = require("./routes/login");
+const statusRouter = require("./routes/status");
 
 // Si es ambiente de desarrollo, usar el archivo .env
 // para las variables de entorno
@@ -49,6 +50,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // Rutas de la aplicación
 app.use("/", indexRouter);
 app.use("/login", loginRouter);
+app.use("/status", statusRouter);
 
 // Inicio del servidor
 app.listen(process.env.PORT, () => {

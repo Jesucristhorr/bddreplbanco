@@ -16,7 +16,7 @@ router.post("/auth", async (req, res, next) => {
   if (result.length === 0) {
     res.render("login", { error: true });
   } else {
-    res.render("login");
+    res.redirect("/status");
   }
 });
 
