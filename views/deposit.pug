@@ -2,7 +2,16 @@ doctype doctype
 html
     head
         style
-            include ../public/css/deposito.css
+            include ../public/css/deposit.css
+
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Karla&family=Rubik&display=swap")
              
     body
         header(class='header')
+
+            a(id = 'btn', name = 'atras', class = 'returnAnchor', href = '/status') Atrás
+
+            p.titulo Deposito
+
+            .logotipo
+                include ../public/assets/logoSVG.svg
