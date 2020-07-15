@@ -6,7 +6,6 @@ html
 
 
     body
-        - let error
         div(class= 'contenedor')
 
             div(class = 'contenedor2')
@@ -15,6 +14,7 @@ html
                     include ../public/assets/logoSVG.svg
 
                 form(action="/login/auth", method="post")
+                    - var error
                     #error
                     if error
                         div(class = 'error')
