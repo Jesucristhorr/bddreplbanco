@@ -13,9 +13,10 @@ html
                 .logotipo(class = 'center')
                     include ../public/assets/logoSVG.svg
 
-                input(type = 'text', id = 'usuario', class = 'center boxSize', placeholder= 'Usuario')
-                input(type = 'password', id = 'contrasenia', class = 'center boxSize', placeholder= 'Contraseña')
-                button(type = 'button', id = 'ingresar', class = 'center button button1') Ingresar
+                form(action="/login/auth", method="post")
+                    input(type = 'text', id = 'usuario', name = 'usuario', class = 'center boxSize', placeholder= 'Usuario', required)
+                    input(type = 'password', id = 'contrasenia', name = 'contrasenia', class = 'center boxSize', placeholder= 'Contraseña', required)
+                    button(type = 'submit', id = 'ingresar', class = 'center button button1') Ingresar
         
                 div(class = 'cont')
                     a(href = '/nuevaConstrasenia', style = 'text-decoration: none') ¿Olvidaste tu contraseña?
