@@ -8,4 +8,10 @@ html {
 }
 
 .header {
+  display: flex;
+  justify-content: space-between;
+  height: 8vh;
+  -webkit-box-shadow: 0px 8px 11px 0px rgba(245, 245, 245, 1);
+  -moz-box-shadow: 0px 8px 11px 0px rgba(245, 245, 245, 1);
+  box-shadow: 0px 8px 11px 0px rgba(245, 245, 245, 1);
 }
