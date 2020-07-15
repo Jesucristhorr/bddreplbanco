@@ -10,6 +10,11 @@ router.get("/transfer", (req, res, next) => {
   res.render("transferir");
 });
 
+router.post("/transfer/check", async (req, res, next) => {
+  console.log(req.body);
+  res.render("transferir");
+});
+
 router.get("/withdrawal", (req, res, next) => {
   res.render("retiro");
 });
