@@ -1,0 +1,28 @@
+doctype html 
+html 
+    head
+        style
+            include ../public/css/status.css
+
+    body
+
+        div(class = 'topDiv')
+            button(type= 'button', id = 'btnCerrarSesion', name = 'cerrarSesion', class = 'logOutButton logOutButton1') Cerrar Sesión
+
+            .logotipo
+                include ../public/assets/logoSVG.svg
+
+        div(class= 'contenedor')
+
+            
+            p(class='text') Cuentas
+            
+            div(class = 'contenedor2')
+                
+                div(class = 'contenedor3')
+
+
+            div(class = 'buttonDiv')
+                button(type= 'button', id = 'btnRetirar', name = 'retirar', class = 'button button2') Retirar Dinero
+                button(type= 'button', id = 'btnTransferir', name = 'transferir', class = 'button button1') Transferencia
+                button(type= 'button', id = 'btnDepositar', name = 'depositar', class = 'button button2') Depositar Dinero
