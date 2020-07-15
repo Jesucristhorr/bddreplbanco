@@ -9,7 +9,6 @@ html {
 
 .logotipo {
   width: 200px;
-  /* height: 100px; */
   margin-bottom: 0.5rem;
 }
 
@@ -57,18 +56,6 @@ html {
   box-shadow: 0px 0px 0px 4px rgba(175, 228, 247, 1);
 }
 
-.text {
-  color: #404040;
-  text-align: center;
-}
-
-.cont {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  width: 100%;
-  margin-top: 10px;
-}
 
 .contenedor {
   display: flex;

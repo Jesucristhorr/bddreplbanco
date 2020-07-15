@@ -3,7 +3,7 @@ const router = express.Router();
 
 // Rutas de status
 router.get("/", (req, res, next) => {
-  res.redirect("/status/transfer");
+  res.render("status");
 });
 
 router.get("/transfer", (req, res, next) => {
