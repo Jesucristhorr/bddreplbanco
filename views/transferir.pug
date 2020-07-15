@@ -3,6 +3,14 @@ html
     head
         style
             include ../public/css/transferir.css
+
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Karla&family=Rubik&display=swap")
     
     body
         header(class='header')
+            a(id = 'btn', name = 'atras', class = 'returnAnchor', href = '/status') Atrás
+
+            p.titulo Transferencia
+
+            .logotipo
+                include ../public/assets/logoSVG.svg
