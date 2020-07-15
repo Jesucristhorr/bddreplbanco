@@ -19,16 +19,7 @@ html
                     if error
                         div(class = 'error')
                             p.description Las credenciales no son correctas.
-                    input(type = 'text', id = 'usuario', name = 'usuario', class = 'center boxSize', placeholder= 'Usuario', required)
-                    input(type = 'password', id = 'contrasenia', name = 'contrasenia', class = 'center boxSize', placeholder= 'Contraseña', required)
-                    button(type = 'submit', id = 'ingresar', class = 'center button button1') Ingresar
-        
-                div(class = 'cont')
-                    a(href = '/nuevaConstrasenia', style = 'text-decoration: none') ¿Olvidaste tu contraseña?
-
-                p(class = 'text') ___________________________________
-
-                p(class = 'text') ¿Aún no tienes una cuenta?
-
-                button(type = 'button', id = 'crearCuenta', class = 'center button button2') Crear una cuenta
+                    input(type = 'text', id = 'usuario', name = 'usuario', class = 'boxSize', placeholder= 'Usuario', required)
+                    input(type = 'password', id = 'contrasenia', name = 'contrasenia', class = 'boxSize', placeholder= 'Contraseña', required)
+                    button(type = 'submit', id = 'ingresar', class = 'button button1') Ingresar
         
