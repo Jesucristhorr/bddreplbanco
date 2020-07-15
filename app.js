@@ -3,6 +3,7 @@ const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
+const monk = require("monk");
 
 // Importando rutas
 const indexRouter = require("./routes/index");
@@ -20,6 +21,19 @@ const app = express();
 // Especifica que se utilizará pug como motor de plantillas
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
+
+// Inicialización de la base de datos
+try {
+  const db = monk(process.env.DB_URI);
+
+  app.use((req, res, next) => {
+    // Hacer accesible a la base de datos en las rutas
+    req.db = db;
+    next();
+  });
+} catch (err) {
+  console.error(err);
+}
 
 // Usa morgan para un log más detallado
 app.use(logger("dev"));

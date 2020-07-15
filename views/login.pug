@@ -6,6 +6,7 @@ html
 
 
     body
+        - let error
         div(class= 'contenedor')
 
             div(class = 'contenedor2')
@@ -14,6 +15,10 @@ html
                     include ../public/assets/logoSVG.svg
 
                 form(action="/login/auth", method="post")
+                    #error
+                    if error
+                        div(class = 'error')
+                            p.description Las credenciales no son correctas.
                     input(type = 'text', id = 'usuario', name = 'usuario', class = 'center boxSize', placeholder= 'Usuario', required)
                     input(type = 'password', id = 'contrasenia', name = 'contrasenia', class = 'center boxSize', placeholder= 'Contraseña', required)
                     button(type = 'submit', id = 'ingresar', class = 'center button button1') Ingresar
