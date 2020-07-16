@@ -44,6 +44,13 @@ html {
   box-shadow: 0px 8px 13px 0px rgba(196, 196, 196, 1);
 }
 
+.container3{
+  
+  justify-content: center;
+  align-items: center;
+}
+
+
 .returnAnchor {
   text-align: center;
   display: flex;
@@ -69,16 +76,12 @@ html {
 .btn-submit {
   font-family: "Karla", sans-serif;
   border-radius: 5px;
-  margin-top: 1rem;
-  width: 100%;
+  width: 20%;
   height: 35px;
   border: none;
   color: black;
   background-color: rgb(72, 235, 180);
   transition: box-shadow 0.2s linear, background-color 0.2s linear;
-}
-
-.btn-submit:hover {
   cursor: pointer;
 }
 
