@@ -18,6 +18,12 @@ html
         section(class = 'container')
             div(class = 'form-container')
                 p.subtitulo Rellene los datos
+                if error
+                        div(class = 'error')
+                            p.description #{error}
+                if exito
+                        div(class = 'success')
+                            p.description #{exito}
                 form(action="/status/transfer/check" method="POST")
                     label(for="cuentasDebitar", class='label-form') Cuenta a debitar
                     br

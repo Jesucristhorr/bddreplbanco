@@ -139,3 +139,19 @@ html {
   margin: 0;
   -webkit-appearance: none;
 }
+
+.error {
+  margin-bottom: 1rem;
+  padding: 0.2rem;
+  text-align: center;
+  background-color: #e43636;
+  color: white;
+}
+
+.success {
+  margin-bottom: 1rem;
+  padding: 0.2rem;
+  text-align: center;
+  background-color: #42a74a;
+  color: white;
+}
