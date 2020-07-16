@@ -3,6 +3,7 @@ html
     head
         style
             include ../public/css/deposit.css
+            include ../routes/status.js
 
         link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Karla&family=Rubik&display=swap")
              
@@ -15,21 +16,6 @@ html
 
             .logotipo
                 include ../public/assets/logoSVG.svg
-<<<<<<< HEAD
-       
-        
-        div(class= 'container')
-            div.tittle2 Cuenta
-                div(class= 'container2')
-                    p.subtittle Tipo de Cuenta:
-                    p.subtittle2 Nro. xxxxxxxxx
-                    button(type='submit', class= 'btn-submit') Cambiar
-            
-            div(class= 'container3')
-                p.tittle2 Monto a depositar
-            
-
-=======
 
         div(class = 'container')
             
@@ -41,4 +27,10 @@ html
 
                 div(class = 'buttonDiv')
                     button(type='submit', class= 'btn-submit') Cambiar
->>>>>>> 4a5ae864ea1793b5e8e87930eb0d54bf44fcc3c7
+
+            p.tittle3 Monto a Depositar
+
+            input(type="text" name = "Currency" class = 'inputCurrency' pattern = "^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+                    value= "" data-type = "currency" placeholder= "$0.00" )
+
+            button(type='submit', class= 'btn-submit2') Confirmar
