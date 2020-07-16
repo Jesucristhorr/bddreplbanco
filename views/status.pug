@@ -21,9 +21,11 @@ html
             p(class='text') Cuentas
             
             div(class = 'contenedor2')
-                each cuenta in user.cuentas
+                each cuenta in cuentas
                     div(class = 'contenedor3')
-                        #{cuenta}
+                        p #{cuenta.numero_cuenta}
+                        p #{cuenta.saldo}
+                        p #{cuenta.tipo}
 
 
             div(class = 'buttonDiv')

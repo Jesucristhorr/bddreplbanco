@@ -2,8 +2,25 @@ const express = require("express");
 const router = express.Router();
 
 // Rutas de status
-router.get("/", (req, res, next) => {
-  res.render("status", { user: req.cookies.userData });
+router.get("/", async (req, res, next) => {
+  try {
+    const db = req.db;
+    const collection = await db.get("cuentas");
+    const usuario = req.cookies.userData;
+
+    let cuentas = [];
+    for (let i = 0; i < usuario.cuentas.length; i++) {
+      let result = await collection.find(
+        { numero_cuenta: usuario.cuentas[i] },
+        {}
+      );
+      cuentas.push(result[0]);
+    }
+
+    res.render("status", { user: req.cookies.userData, cuentas: cuentas });
+  } catch (err) {
+    console.error(err);
+  }
 });
 
 router.get("/transfer", (req, res, next) => {
