@@ -16,16 +16,14 @@ html
 
         div(class= 'contenedor')
 
-            p(class = 'text') Hola, #{ usuario } 
+            p(class = 'text') Hola, #{ user.nombres } 
             
             p(class='text') Cuentas
             
             div(class = 'contenedor2')
-                
-                div(class = 'contenedor3')
-                    -var tipoCuentas = ['11111111', '3333333333', '294713917'];
-                    each cuentas in tipoCuentas
-                        option(value= cuentas) #{cuentas}
+                each cuenta in user.cuentas
+                    div(class = 'contenedor3')
+                        #{cuenta}
 
 
             div(class = 'buttonDiv')

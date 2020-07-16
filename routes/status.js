@@ -3,15 +3,15 @@ const router = express.Router();
 
 // Rutas de status
 router.get("/", (req, res, next) => {
-  res.render("status");
+  res.render("status", { user: req.cookies.userData });
 });
 
 router.get("/transfer", (req, res, next) => {
-  res.render("transferir");
+  res.render("transferir", { user: req.cookies.userData });
 });
 
 router.post("/transfer/check", async (req, res, next) => {
-  console.log(req.body);
+  const db = req.db;
   res.render("transferir");
 });
 
