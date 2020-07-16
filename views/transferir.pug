@@ -19,15 +19,15 @@ html
             div(class = 'form-container')
                 p.subtitulo Rellene los datos
                 form(action="/status/transfer/check" method="POST")
-                    label(for="cuentas-debitar", class='label-form') Cuenta a debitar
+                    label(for="cuentasDebitar", class='label-form') Cuenta a debitar
                     br
-                    select(name="cuentas-debitar", id='cuentas-debitar', class='form-select', required)
+                    select(name="cuentasDebitar", id='cuentasDebitar', class='form-select', required)
                         each cuenta in user.cuentas
                             option(value=cuenta) #{cuenta}
                     br
-                    label(for="cuenta-acreditar", class='label-form') Cuenta a acreditar
+                    label(for="cuentaAcreditar", class='label-form') Cuenta a acreditar
                     br
-                    input(type="text", name="cuenta-acreditar", id='cuenta-acreditar', class='form-input', maxlength='10', required)
+                    input(type="text", name="cuentaAcreditar", id='cuentaAcreditar', class='form-input', maxlength='10', required)
                     br
                     label(for="concepto", class='label-form') Concepto
                     br

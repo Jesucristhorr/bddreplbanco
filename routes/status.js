@@ -12,6 +12,13 @@ router.get("/transfer", (req, res, next) => {
 
 router.post("/transfer/check", async (req, res, next) => {
   const db = req.db;
+  const form = req.body;
+  const collection = await db.get("cuentas");
+  const cuentaAcreditada = await collection.find(
+    { numero_cuenta: form.cuentaAcreditar },
+    {}
+  );
+  console.log(cuentaAcreditada);
   res.render("transferir");
 });
 
