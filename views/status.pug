@@ -23,10 +23,10 @@ html
             div(class = 'contenedor2')
                 each cuenta in cuentas
                     div(class = 'contenedor3')
-                        p #{cuenta.numero_cuenta}
-                        p #{cuenta.saldo}
-                        p #{cuenta.tipo}
-
+                        p(class = 'tipoCuenta') #{cuenta.tipo}
+                        p(class = 'cuenta') Nro. #{cuenta.numero_cuenta}
+                        p(class = 'saldoDisponible') Saldo disponible
+                        p(class = 'saldo') $ #{cuenta.saldo}
 
             div(class = 'buttonDiv')
                 a(id = 'btnRetirar', name = 'retirar', class = 'button button2', href = '/status/withdrawal') Retirar Dinero
