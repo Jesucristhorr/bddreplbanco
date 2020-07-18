@@ -48,9 +48,12 @@ html {
 }
 
 .container3{
-  
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: line;
 }
 
 
@@ -136,13 +139,13 @@ html {
   margin: 2rem;
 }
 
-.subtittle {
+.accountType {
   text-align: left;
   margin: 0;
   font-size: 16px;
 }
 
-.subtittle2 {
+.accountNumber {
   text-align: left;
   margin: 0;
   font-size: 14px;
@@ -157,11 +160,13 @@ html {
 
 
 .inputCurrency {
+  display: flex;
   border: none;
+  width: 80;
+  position: relative;
   outline: none;
   font-size: 32px;
   text-align: center;
-  padding: .5rem 1rem;
 }
 
 .inputCurrency:focus {
@@ -170,6 +175,14 @@ html {
 }
 
 .inputCurrency:hover {
+
   outline: none;
   border: none;
+ 
+}
+
+.inputCurrency::-webkit-inner-spin-button,
+.inputCurrency::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
 }
