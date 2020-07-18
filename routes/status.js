@@ -85,8 +85,6 @@ router.post("/transfer/check", async (req, res, next) => {
 
 router.get("/withdrawal", (req, res, next) => {
   
-
-
   res.render("retiro", {user: req.cookies.userData});//-----here
 });
 
