@@ -84,7 +84,10 @@ router.post("/transfer/check", async (req, res, next) => {
 });
 
 router.get("/withdrawal", (req, res, next) => {
-  res.render("retiro");
+  
+
+
+  res.render("retiro", {user: req.cookies.userData});//-----here
 });
 
 router.get("/deposit", (req, res, next) => {

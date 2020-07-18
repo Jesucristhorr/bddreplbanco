@@ -7,22 +7,26 @@ html(lang='en')
     
     style
         include ../public/css/retiro.css
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Karla&family=Rubik&display=swap")
 
   body
     header.cabeza
-      
+
+      .btnAtras
+          a(id = "btnAtras" , href = '/status') Atrás
+
       .logotipo
            include ../public/assets/logoSVG.svg
       
 
     .retirarDinero
-      h1 RETIRAR DINERO
+      p RETIRAR DINERO
     .cuentatitle
-      h1 Cuenta
+      p Cuenta
     #div
       .cuenta
         .cajitaCuenta
-          p --Tipo de cuenta--
+          p --Tipo de cuenta-- #{ user.nombres }
           p Nro. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           p Saldo disponible
           h1 $ 0.00
