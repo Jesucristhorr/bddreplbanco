@@ -1,22 +1,11 @@
-
-body{
-    margin: 0px;
-    padding: 0px;
-    
+body {
+  margin: 0px;
+  padding: 0px;
 }
 
-
-
-h1{
-    font-family: "Karla", sans-serif
+* {
+  font-family: "Rubik", sans-serif;
 }
-
-p{
-    font-family: "Karla", sans-serif;
-    color: #404040;
-    
-}
-
 
 /*#div {
     border: 3px solid black;
@@ -24,136 +13,166 @@ p{
     margin-right: 100px;
 }*/
 
-
 .cabeza {
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 8vh;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    -webkit-box-shadow: 0px 8px 11px 0px rgba(245, 245, 245, 1);
-    -moz-box-shadow: 0px 8px 11px 0px rgba(245, 245, 245, 1);
-    box-shadow: 0px 8px 11px 0px rgba(245, 245, 245, 1);
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  -webkit-box-shadow: 0px 8px 11px 0px rgba(245, 245, 245, 1);
+  -moz-box-shadow: 0px 8px 11px 0px rgba(245, 245, 245, 1);
+  box-shadow: 0px 8px 11px 0px rgba(245, 245, 245, 1);
 }
 
 .btnAtras {
-    width: 150px;
-    height: 35px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    font-family: "Karla", sans-serif;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    background: #48FF98;
-    
+  width: 150px;
+  height: 35px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-family: "Karla", sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: #48ff98;
 }
 
-#btnAtras{
-    font-family: "Karla", sans-serif;
-    text-decoration: none;
-    text-align: center;
-    color: black;
-    font-size: 15px;
+.btnAtras:focus {
+  -webkit-box-shadow: 0px 0px 0px 4px #a2f7c7;
+  -moz-box-shadow: 0px 0px 0px 4px #a2f7c7;
+  box-shadow: 0px 0px 0px 4px #a2f7c7;
+  outline: none;
+}
+
+.contenedor {
+  display: flex;
+  height: 92vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#btnAtras {
+  font-family: "Karla", sans-serif;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  font-size: 15px;
 }
 
 .logotipo {
-    width: 200px;
-    margin-bottom: 0.5rem;
-    margin-top: 20px;
-       
+  width: 200px;
+  height: 100%;
 }
 
-.retirarDinero{
-    border: 1px solid #ffffff;
-    padding: 0px;
-    text-align: center;
-    font-size: 32px;
-}
-
-.cuentatitle{
-    background: #ffffff;
-    margin-left: 150px;
-    border: 1px solid #ffffff;
-    font-size: 32px;
-    
+.retirarDinero {
+  font-size: 40px;
 }
 
 .cuenta {
-    border: 1px, solid black;
-    display: flex;
-    justify-content: center;
-    background: #ffffff;
-    margin-left: 150px;
-    margin-right: 100px;
-    margin-bottom: 20px;
-    -webkit-box-shadow: 0px 8px 13px 0px rgba(196, 196, 196, 1);
-    -moz-box-shadow: 0px 8px 13px 0px rgba(196, 196, 196, 1);
-    box-shadow: 0px 8px 13px 0px rgba(196, 196, 196, 1);
-    
-
+  border: 1px, solid black;
+  display: flex;
+  justify-content: center;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 8px 13px 0px rgba(196, 196, 196, 1);
+  -moz-box-shadow: 0px 8px 13px 0px rgba(196, 196, 196, 1);
+  box-shadow: 0px 8px 13px 0px rgba(196, 196, 196, 1);
 }
 
-.cajitaCuenta{
-    padding: 20px;
-    
+.cajitaCuenta {
+  padding: 20px;
+  width: 20.5rem;
+  height: auto;
+}
+
+.label-form {
+  font-family: "Karla", sans-serif;
+}
+
+.form-select {
+  margin-top: 0.6rem;
+  font-family: "Karla", sans-serif;
+  padding: 0.5rem;
+  width: 100%;
+  margin-bottom: 0.8rem;
 }
 
 .cajitaCuentaBoton {
-    justify-content: center;
-    margin-top: 90px;
-    /*align-self: center;*/
+  justify-content: center;
+  margin-top: 90px;
+  /*align-self: center;*/
 }
 
-#btnCambiar{
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    background-color: #48FF98;
-    border-radius: 8px;
-    font-family: "Karla", sans-serif
-
+#btnCambiar {
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #48ff98;
+  border-radius: 8px;
+  font-family: "Karla", sans-serif;
 }
 
-.montoRetirar{
-    display: flex;
-    justify-content: center;
-    background: #ffffff;
-    border: 1px, solid black;
-    align-items: center;
-    flex-direction: column;
-    font-family: hero;
-    margin-bottom: 50px;
-    
-    
-
+.montoRetirar {
+  display: flex;
+  justify-content: center;
+  border: 1px, solid black;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Rubik", sans-serif;
+  margin-top: 1rem;
 }
 
-#btncontinuar{
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    background-color: #48DAFF;
-    border-radius: 8px;
-    font-family: "Karla", sans-serif
-    
+.divCurrency {
+  display: flex;
+  width: 90px;
+  position: relative;
+  font-size: 32px;
+}
+.inputCurrency {
+  width: 100%;
+  position: relative;
+  border: none;
+  font-size: 32px;
+  -moz-appearance: textfield;
+}
+
+.error {
+  margin-bottom: 1rem;
+  padding: 0.2rem;
+  text-align: center;
+  background-color: #e43636;
+  color: white;
+}
+
+.success {
+  margin-bottom: 1rem;
+  padding: 0.2rem;
+  text-align: center;
+  background-color: #42a74a;
+  color: white;
+}
+
+#btncontinuar {
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 2rem;
+  cursor: pointer;
+  background-color: #48daff;
+  border-radius: 8px;
+  font-family: "Karla", sans-serif;
 }

@@ -95,8 +95,57 @@ router.post("/transfer/check", async (req, res, next) => {
 });
 
 router.get("/withdrawal", (req, res, next) => {
-  
-  res.render("retiro", {user: req.cookies.userData});//-----here
+  res.render("retiro", {
+    user: req.cookies.userData,
+    cuentas: req.cookies.userCuentas,
+  });
+});
+
+router.post("/withdrawal/check", async (req, res, next) => {
+  const db = req.db;
+  const form = req.body;
+  const collection = await db.get("cuentas");
+  const cuentasUsuario = req.cookies.userCuentas;
+  saldo = 0;
+  for (let i = 0; i < cuentasUsuario.length; i++) {
+    if (cuentasUsuario[i].numero_cuenta === form.cuentasDebitar) {
+      saldo = cuentasUsuario[i].saldo;
+    }
+  }
+
+  if (saldo < form.Currency) {
+    res.render("retiro", {
+      user: req.cookies.userData,
+      cuentas: req.cookies.userCuentas,
+      error: "No tienes el saldo suficiente.",
+    });
+  } else {
+    saldo = Number(parseFloat(saldo - Number(form.Currency)).toFixed(2));
+
+    await collection.update(
+      { numero_cuenta: form.cuentasDebitar },
+      { $set: { saldo: saldo } }
+    );
+
+    const usuario = req.cookies.userData;
+    let cuentas = [];
+
+    for (let i = 0; i < usuario.cuentas.length; i++) {
+      let result = await collection.find(
+        { numero_cuenta: usuario.cuentas[i] },
+        {}
+      );
+      cuentas.push(result[0]);
+    }
+
+    res.cookie("userCuentas", cuentas);
+
+    res.render("retiro", {
+      user: req.cookies.userData,
+      cuentas: cuentas,
+      exito: "Se realizó el retiro correctamente.",
+    });
+  }
 });
 
 router.get("/deposit", (req, res, next) => {

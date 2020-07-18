@@ -116,10 +116,10 @@ html {
 
 .logotipo {
   width: 200px;
+  height: 100%;
 }
 
 .tittle {
-  text-align: center;
   font-size: 40px;
 }
 

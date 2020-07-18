@@ -12,28 +12,32 @@ html(lang='en')
   body
     header.cabeza
 
-      .btnAtras
-          a(id = "btnAtras" , href = '/status') Atrás
+      a(id = "btnAtras", class = 'btnAtras', href = '/status') Atrás
+
+      .retirarDinero
+        p Retiros
 
       .logotipo
            include ../public/assets/logoSVG.svg
-      
-
-    .retirarDinero
-      p RETIRAR DINERO
-    .cuentatitle
-      p Cuenta
-    #div
+    form(class = 'contenedor', action = '/status/withdrawal/check', method = 'POST')
+      if error
+        div(class = 'error')
+          p.description #{error}
+      if exito
+        div(class = 'success')
+          p.description #{exito}
+          
       .cuenta
         .cajitaCuenta
-          p --Tipo de cuenta-- #{ user.nombres }
-          p Nro. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-          p Saldo disponible
-          h1 $ 0.00
-        .cajitaCuentaBoton
-          button#btnCambiar Cambiar
-    .montoRetirar
-      p Monto a retirar
-      h1 $0.00
-      button#btncontinuar Confirmar
-    footer 
+          label(for="cuentasDebitar", class='label-form') Cuenta a debitar
+          br
+          select(name="cuentasDebitar", id='cuentasDebitar', class='form-select', required)
+            each cuenta in cuentas
+              option(value=cuenta.numero_cuenta) #{cuenta.numero_cuenta} - #{cuenta.tipo} | $ #{cuenta.saldo}
+
+      .montoRetirar
+        p Monto a retirar
+        div(class='divCurrency') $
+          input(type="number" name = "Currency" class = 'inputCurrency' , value= "" , data-type = "currency"
+              , min = "1" , max = "2000", placeholder= "0.00", step="0.01", required )
+        button#btncontinuar Confirmar
