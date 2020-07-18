@@ -2,15 +2,14 @@ body {
   margin: 0;
   padding: 0;
 }
-  
+
 html {
   box-sizing: border-box;
 }
 
-* { 
+* {
   font-family: "Rubik", sans-serif;
 }
-  
 
 .header {
   display: flex;
@@ -31,7 +30,6 @@ html {
   min-height: 70vh;
   justify-content: center;
   align-items: center;
-
 }
 
 .container2 {
@@ -47,7 +45,7 @@ html {
   box-shadow: 0px 8px 13px 0px rgba(196, 196, 196, 1);
 }
 
-.container3{
+.container3 {
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -55,7 +53,6 @@ html {
   display: flex;
   flex-direction: line;
 }
-
 
 .returnAnchor {
   text-align: center;
@@ -117,7 +114,6 @@ html {
   outline: none;
 }
 
-
 .logotipo {
   width: 200px;
 }
@@ -151,13 +147,12 @@ html {
   font-size: 14px;
 }
 
-.buttonDiv{
+.buttonDiv {
   width: 100%;
   height: auto;
   display: flex;
   justify-content: flex-end;
 }
-
 
 .inputCurrency {
   display: flex;
@@ -167,6 +162,7 @@ html {
   outline: none;
   font-size: 32px;
   text-align: center;
+  -moz-appearance: textfield;
 }
 
 .inputCurrency:focus {
@@ -175,14 +171,35 @@ html {
 }
 
 .inputCurrency:hover {
-
   outline: none;
   border: none;
- 
 }
 
 .inputCurrency::-webkit-inner-spin-button,
-.inputCurrency::-webkit-outer-spin-button{
+.inputCurrency::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.form-input {
+  padding: 0.5rem;
+  font-size: 20px;
+  width: 100%;
+  font-family: "Karla", sans-serif;
+}
+
+.error {
+  margin-bottom: 1rem;
+  padding: 0.2rem;
+  text-align: center;
+  background-color: #e43636;
+  color: white;
+}
+
+.success {
+  margin-bottom: 1rem;
+  padding: 0.2rem;
+  text-align: center;
+  background-color: #42a74a;
+  color: white;
 }

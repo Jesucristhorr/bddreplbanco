@@ -4,13 +4,14 @@ const router = express.Router();
 // Rutas de login
 router.get("/", (req, res, next) => {
   res.clearCookie("userData");
+  res.clearCookie("userCuentas");
   res.render("login");
 });
 
 router.post("/auth", async (req, res, next) => {
   try {
     const db = req.db;
-    const collection = await db.get("clientes");
+    let collection = await db.get("clientes");
     const result = await collection.find(
       { usuario: req.body.usuario, contrasenia: req.body.contrasenia },
       {}
@@ -20,6 +21,20 @@ router.post("/auth", async (req, res, next) => {
     } else {
       delete result[0].contrasenia;
       res.cookie("userData", result[0]);
+      collection = await db.get("cuentas");
+
+      let cuentas = [];
+      let usuario = result[0];
+      for (let i = 0; i < usuario.cuentas.length; i++) {
+        let resultCuentas = await collection.find(
+          { numero_cuenta: usuario.cuentas[i] },
+          {}
+        );
+        cuentas.push(resultCuentas[0]);
+      }
+
+      res.cookie("userCuentas", cuentas);
+
       res.redirect("/status");
     }
   } catch (err) {

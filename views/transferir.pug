@@ -4,6 +4,8 @@ html
         style
             include ../public/css/transferir.css
 
+        title Transferencias
+
         link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Karla&family=Rubik&display=swap")
     
     body
@@ -41,7 +43,7 @@ html
                     br
                     label(for="valor", class='label-form') Valor de la transferencia
                     br
-                    input(type="number", name="valor", id='valor', class='form-input-number', max=2000, min=1, required)
+                    input(type="number", name="valor", id='valor', class='form-input-number', max=2000, min=1, step=".01", required)
                     br
                     button(type="submit", class='btn-submit') Transferir
 
