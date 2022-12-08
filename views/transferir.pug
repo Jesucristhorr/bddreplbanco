@@ -1,0 +1,49 @@
+doctype html
+html
+    head
+        style
+            include ../public/css/transferir.css
+
+        title Transferencias
+
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Karla&family=Rubik&display=swap")
+    
+    body
+        header(class='header')
+            a(id = 'btn', name = 'atras', class = 'returnAnchor', href = '/status') Atrás
+
+            p.titulo Transferencias
+
+            .logotipo
+                include ../public/assets/logoSVG.svg
+
+        section(class = 'container')
+            div(class = 'form-container')
+                p.subtitulo Rellene los datos
+                if error
+                        div(class = 'error')
+                            p.description #{error}
+                if exito
+                        div(class = 'success')
+                            p.description #{exito}
+                form(action="/status/transfer/check" method="POST")
+                    label(for="cuentasDebitar", class='label-form') Cuenta a debitar
+                    br
+                    select(name="cuentasDebitar", id='cuentasDebitar', class='form-select', required)
+                        each cuenta in user.cuentas
+                            option(value=cuenta) #{cuenta}
+                    br
+                    label(for="cuentaAcreditar", class='label-form') Cuenta a acreditar
+                    br
+                    input(type="text", name="cuentaAcreditar", id='cuentaAcreditar', class='form-input', maxlength='10', required)
+                    br
+                    label(for="concepto", class='label-form') Concepto
+                    br
+                    input(type="text", name="concepto", id='concepto', class='form-input', required)
+                    br
+                    label(for="valor", class='label-form') Valor de la transferencia
+                    br
+                    input(type="number", name="valor", id='valor', class='form-input-number', max=2000, min=1, step=".01", required)
+                    br
+                    button(type="submit", class='btn-submit') Transferir
+

@@ -1,0 +1,28 @@
+doctype html 
+html 
+    head
+        style
+            include ../public/css/login.css
+
+        title Inicio de sesión
+
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Karla&family=Rubik&display=swap")
+
+    body
+        div(class= 'contenedor')
+
+            div(class = 'contenedor2')
+
+                .logotipo(class = 'center')
+                    include ../public/assets/logoSVG.svg
+
+                form(action="/login/auth", method="post")
+                    - var error
+                    #error
+                    if error
+                        div(class = 'error')
+                            p.description Las credenciales no son correctas.
+                    input(type = 'text', id = 'usuario', name = 'usuario', class = 'boxSize', placeholder= 'Usuario', required)
+                    input(type = 'password', id = 'contrasenia', name = 'contrasenia', class = 'boxSize', placeholder= 'Contraseña', required)
+                    button(type = 'submit', id = 'ingresar', class = 'button button1') Ingresar
+        

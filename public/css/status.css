@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Rubik", sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+.logotipo {
+  width: 200px;
+  height: 100%;
+}
+
+.button {
+  width: 150px;
+  height: 50px;
+  transition-duration: 0.4s;
+  margin: 2rem;
+  cursor: pointer;
+  color: #404040;
+  border: none;
+  border-radius: 5px;
+  font-family: "Karla", sans-serif;
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.button1 {
+  background-color: #4ec2ed;
+}
+
+.button1:hover {
+  background-color: #008cba;
+  color: white;
+}
+
+.button1:focus {
+  -webkit-box-shadow: 0px 0px 0px 4px rgba(175, 228, 247, 1);
+  -moz-box-shadow: 0px 0px 0px 4px rgba(175, 228, 247, 1);
+  box-shadow: 0px 0px 0px 4px rgba(175, 228, 247, 1);
+}
+
+.button2 {
+  background-color: #48ff98;
+}
+
+.button2:hover {
+  background-color: #3ed17e;
+  color: white;
+}
+
+.button2:focus {
+  -webkit-box-shadow: 0px 0px 0px 4px rgb(175, 247, 181);
+  -moz-box-shadow: 0px 0px 0px 4px rgba(175, 247, 181);
+  box-shadow: 0px 0px 0px 4px rgba(175, 247, 181);
+}
+
+.topDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  -webkit-box-shadow: 0px 8px 11px 0px rgba(245, 245, 245, 1);
+  -moz-box-shadow: 0px 8px 11px 0px rgba(245, 245, 245, 1);
+  box-shadow: 0px 8px 11px 0px rgba(245, 245, 245, 1);
+}
+
+.buttonDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: auto;
+}
+
+.text {
+  font-size: 200%;
+  font-family: "Rubik", sans-serif;
+  color: #404040;
+  text-align: center;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 70vh;
+}
+
+.contenedor2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.contenedor3 {
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+  height: auto;
+  padding: 2rem;
+  margin: 1.5rem;
+
+  -webkit-box-shadow: 0px 8px 13px 0px rgba(196, 196, 196, 1);
+  -moz-box-shadow: 0px 8px 13px 0px rgba(196, 196, 196, 1);
+  box-shadow: 0px 8px 13px 0px rgba(196, 196, 196, 1);
+}
+
+.logOutButton {
+  width: 150px;
+  height: 35px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-family: "Karla", sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13.33px;
+  text-decoration: none;
+}
+
+.logOutButton1 {
+  background-color: #fe5959;
+  color: white;
+}
+
+.logOutButton1:hover {
+  background-color: #f82525;
+  color: white;
+}
+
+.logOutButton:focus {
+  -webkit-box-shadow: 0px 0px 0px 4px rgb(247, 154, 154);
+  -moz-box-shadow: 0px 0px 0px 4px rgba(247, 154, 154);
+  box-shadow: 0px 0px 0px 4px rgba(247, 154, 154);
+}
+
+.tipoCuenta {
+  text-align: left;
+  font-size: 25px;
+  margin: 0;
+}
+
+.cuenta {
+  text-align: left;
+  font-size: 15px;
+  margin: 0;
+}
+
+.saldoDisponible {
+  text-align: right;
+  font-size: 15px;
+  margin: 0;
+}
+.saldo {
+  text-align: right;
+  font-size: 35px;
+  margin: 0;
+}

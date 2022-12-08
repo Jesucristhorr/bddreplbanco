@@ -1,0 +1,36 @@
+doctype html 
+html 
+    head
+        style
+            include ../public/css/status.css
+
+        title Dashboard
+
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Karla&family=Rubik&display=swap")
+
+    body
+
+        div(class = 'topDiv')
+            a(id = 'btnCerrarSesion', name = 'cerrarSesion', class = 'logOutButton logOutButton1', href = '/login') Cerrar Sesión
+
+            .logotipo
+                include ../public/assets/logoSVG.svg
+
+        div(class= 'contenedor')
+
+            p(class = 'text') Hola, #{ user.nombres } 
+            
+            p(class='text') Cuentas
+            
+            div(class = 'contenedor2')
+                each cuenta in cuentas
+                    div(class = 'contenedor3')
+                        p(class = 'tipoCuenta') #{cuenta.tipo}
+                        p(class = 'cuenta') Nro. #{cuenta.numero_cuenta}
+                        p(class = 'saldoDisponible') Saldo disponible
+                        p(class = 'saldo') $ #{cuenta.saldo}
+
+            div(class = 'buttonDiv')
+                a(id = 'btnRetirar', name = 'retirar', class = 'button button2', href = '/status/withdrawal') Retirar Dinero
+                a(id = 'btnTransferir', name = 'transferir', class = 'button button1', href = '/status/transfer') Transferencia
+                a(id = 'btnDepositar', name = 'depositar', class = 'button button2', href = '/status/deposit') Depositar Dinero
